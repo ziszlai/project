@@ -12,5 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'Hi there';
+    //return view('welcome');
 });
+
+Route::get('about', function () {
+    return view('pages.about');
+    //return view('welcome');
+});
+
+
+//Route::get('/about', 'PagesController@home');
