@@ -18,4 +18,12 @@
 
 Route::get('/', 'PagesController@home');
 
-Route::get('/about', 'PagesController@about');
+Route::get('about', 'PagesController@about');
+Route::get('cards', 'CardsController@index');
+Route::get('cards/{card}', 'CardsController@show');
+
+//Route::get('cards/create', 'CardsController@create');
+//Route::get('cards/1/edit', 'CardsController@edit');
+//Route::put('cards/1', 'CardsController@update');
+//Route::delete('cards/1', 'CardsController@destroy');
+//Route::post('cards', 'CardsController@store');
