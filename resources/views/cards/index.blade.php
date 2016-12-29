@@ -6,7 +6,11 @@
     All cards
     <ul>
     @foreach ($cards as $card)
-        <li>{{ $card->title }}</li>
+        <li>
+            <a href="{{ $card->path() }}">
+                {{ $card->title }}
+            </a>
+        </li>
     @endforeach
     </ul>
 @stop
