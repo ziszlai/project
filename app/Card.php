@@ -14,6 +14,6 @@ class Card extends Model
     }
 
     public function addNote(Note $note) {
-        return $this->notes()->create($note);
+        return $this->notes()->save($note);
     }
 }
