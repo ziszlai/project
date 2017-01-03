@@ -31,3 +31,7 @@ Route::patch('notes/{note}', 'NotesController@update');
 //Route::put('cards/1', 'CardsController@update');
 //Route::delete('cards/1', 'CardsController@destroy');
 //Route::post('cards', 'CardsController@store');
+Auth::routes();
+
+Route::get('/dashboard', 'HomeController@index');
+Route::get('/home', 'HomeController@index');
