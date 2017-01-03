@@ -25,6 +25,10 @@ class NotesController extends Controller
 //        $note->user_id = 1;//Auth::id;
 //        $note->by(Auth::user());
 
+        $this->validate($request, [
+            'body' => 'required|min:3'
+        ]);
+
         $card->AddNote(
             new Note($request->all()),
             1
