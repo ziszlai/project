@@ -20,9 +20,14 @@ class NotesController extends Controller
 //        $card->notes()->create(['body' => $request->body]);
 
 //        $card->notes()->create($request->all());
+//        $note = new Note($request->all());
+
+//        $note->user_id = 1;//Auth::id;
+//        $note->by(Auth::user());
 
         $card->AddNote(
-            new Note($request->all())
+            new Note($request->all()),
+            1
         );
 
         //return \Redirect::to('/');

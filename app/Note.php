@@ -12,6 +12,10 @@ class Note extends Model
         return $this->belongsTo(Card::class);
     }
 
+    public function by(User $user) {
+        $this->user_id = $user->id;
+    }
+
     public function user() {
         return $this->belongsTo(User::class);
     }
