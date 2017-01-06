@@ -1,0 +1,15 @@
+.alert {
+  padding: 10px;
+}
+.alert--Info {
+  background: #e3e3e3;
+}
+
+.alert--Success {
+  background: #8ac48a;
+}
+
+.alert--Error {
+  background: red;
+  color: white;
+}

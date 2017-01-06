@@ -12,4 +12,8 @@ $primary: green;
 $text: white;
 
 body {
+  padding: 0;
+  margin: 0;
 }
+
+@import 'components/Alert';

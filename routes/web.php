@@ -35,3 +35,17 @@ Auth::routes();
 
 Route::get('/dashboard', 'HomeController@index');
 Route::get('/home', 'HomeController@index');
+
+Route::get('begin', function () {
+    flash('You are now signed in!');
+    //Session::flash('status', 'hello there');
+    session(['foo' => 'bar']); // Session::put('foo', 'bar')'
+    // Session::get('foo'); session('foo');
+    return redirect('/');
+    //Redirect::to('/')
+});
+
+Route::get('/', function() {
+    return view('welcome');
+});
+
