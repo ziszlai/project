@@ -1,5 +1,37 @@
 <?php
 
+class Mailer {
+    public function __construct() {
+
+    }
+}
+
+class RegistersUsers {
+    protected $mailer;
+
+    // Constructor dependency injection
+    public function __construct(Mailer $mailer)
+    {
+        $this->mailer = $mailer;
+    }
+}
+
+// App::bind
+// You don't always have to declare this, if it can be automatically resolved it will
+// Don't forget to typehint
+// Can be done on the controller level just by typehinting: RegistersUsers $registration
+// Request $request
+App::singleton('RegistersUsers', function () {
+    return new RegistersUsers(new Mailer);
+});
+
+//var_dump(App::make('foo'));
+$one = app('RegistersUsers');
+$two = app('RegistersUsers');
+
+/*var_dump($one);
+var_dump($two);*/
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -45,7 +77,8 @@ Route::get('begin', function () {
     //Redirect::to('/')
 });
 
-Route::get('/', function() {
-    return view('welcome');
+// Typehintered dependency
+Route::get('/', function(RegistersUsers $registration) {
+    var_dump($registration);
+    //return view('welcome');
 });
-
