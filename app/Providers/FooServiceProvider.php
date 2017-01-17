@@ -14,7 +14,7 @@ class FooServiceProvider extends ServiceProvider
     public function boot()
     {
         // Event::listen('') // waiting for a specific event to occur
-        var_dump('boot');
+//        var_dump('boot');
     }
 
     /**
@@ -25,6 +25,6 @@ class FooServiceProvider extends ServiceProvider
     public function register()
     {
         // This is for registering with the service container
-        var_dump('hello');
+//        var_dump('hello');
     }
 }

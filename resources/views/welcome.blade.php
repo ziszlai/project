@@ -1,4 +1,5 @@
 @extends('layout')
+@include('stats')
 
 @section('content')
     @include ('flash')

@@ -1,5 +1,11 @@
 <?php
 
+// View composer
+// Should be in a service provider
+//View::composer('stats', function($view) {
+//    $view->with('stats', app('App\Stats'));
+//});
+
 class Mailer {
     public function __construct() {
 
@@ -80,5 +86,5 @@ Route::get('begin', function () {
 // Typehintered dependency
 Route::get('/', function(RegistersUsers $registration) {
     //var_dump($registration);
-    //return view('welcome');
+    return view('welcome');
 });
