@@ -79,6 +79,6 @@ Route::get('begin', function () {
 
 // Typehintered dependency
 Route::get('/', function(RegistersUsers $registration) {
-    var_dump($registration);
+    //var_dump($registration);
     //return view('welcome');
 });
