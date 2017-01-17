@@ -1,3 +1,4 @@
+process.env.DISABLE_NOTIFIER = true
 const elixir = require('laravel-elixir');
 
 require('laravel-elixir-vue-2');
@@ -20,5 +21,6 @@ elixir((mix) => {
     // mix.less(['app.less', 'other.less']);
     // mix.coffee(['module.coffee', 'moduletwo.coffee']);
     // mix.scripts(["one.js", "two.js"], 'public/foo/bar.js');
-    mix.browserify(['one.js', 'two.js']);
+    // mix.browserify(['one.js', 'two.js']);
+    mix.phpUnit();
 });

@@ -55,6 +55,9 @@ var_dump($two);*/
 //});
 
 Route::get('/', 'PagesController@home');
+Route::post('/search-results', function(){
+    return sprintf('Search results for "%s"', Request::input('search'));
+});
 
 Route::get('about', 'PagesController@about');
 Route::get('cards', 'CardsController@index');

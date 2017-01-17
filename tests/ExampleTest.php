@@ -14,6 +14,9 @@ class ExampleTest extends TestCase
     public function testBasicExample()
     {
         $this->visit('/')
-             ->see('Laravel');
+             ->type('abc', '#search')
+             ->press('Search')
+             ->see('Search results for "abc"')
+             ->seePageIs('search-results');
     }
 }
